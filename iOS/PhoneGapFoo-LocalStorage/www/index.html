@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="localStorage.js"></script>
+	<script type="text/javascript">
+
+
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	function onDeviceReady()
+	{
+		initialize();
+	}
+    
+    </script>
+  </head>
+
+  <body onload="onBodyLoad()">
+
+	<h1>Local storage</h1>
+	<fieldset>
+		<legend>Add new value</legend>
+		<ul>
+			<li>Name</li>
+			<li><input type="text" id="newname" /></li>
+			<li>Value</li>
+			<li><input type="text" id="newvalue" /></li>
+			<li><input type="button" id="setbutton" value="Set Value" />
+				<input type="button" id="clearbutton" value="Clear Values" /></li>
+		</ul>
+	</fieldset>
+
+	<fieldset>
+		<legend>Current values</legend>
+		<ul>
+			<li><div id="currentsettings"></div></li>
+			<li><input type="button" id="rereshbutton" value="Refresh" /></li>
+		</ul>
+	</fieldset>
+
+  </body>
+
+</html>

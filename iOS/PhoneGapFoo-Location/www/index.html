@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="location.js"></script>
+    <script type="text/javascript">
+
+
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	function onDeviceReady()
+	{
+		initialize();		
+	}
+    
+    </script>
+  </head>
+  <body onload="onBodyLoad()">
+	<h1>Location</h1>
+	<fieldset>
+		<ul>
+			<li>Your location</li>
+			<li><div id="location"></div></li>
+			<li><input type="button" id="refreshbutton" value="Refresh Location" /></li>
+		</ul>
+	</fieldset>
+	
+	<fieldset id="destinationform" style="display:none;margin-top:15px">
+		<ul>
+			<li>Your destination</li>
+			<li><input type="text" id="destination" value="Bletchley Park"/></li>
+			<li><input type="button" id="directionsbutton" value="Get Directions" /></li>
+		</ul>
+	</fieldset>
+	
+  </body>
+</html>
