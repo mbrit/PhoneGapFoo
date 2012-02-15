@@ -1,151 +1,89 @@
-var httpRequest = new XMLHttpRequest();  
+
 
 function initialize() {
 	
-	$("#downloadbutton").click(function() {
-		handleDownload();
+	$("#writebutton").click(function() {
+		handleFileWrite();
 	});
-
+	$("#readbutton").click(function() {
+		handleFileRead();
+	});
 }
 
-function handleDownload() {
-
-	// url...
-	var url = $("#url").val().trim();
-	if(url.length == 0) {
-		navigator.notification.alert("You must provide a URL.");
+function handleFileWrite() {	
+	
+	var filename = getFilename();
+	if(filename == null)
 		return;
-	}
 	
-	// download it...
-	console.log("Downloading: " + url);
-	$.ajax({
-		url: url,
-		method: "GET",
-		success: handleServerResponse,
-		error: handleError
-	});
-
-}
-
-function handleServerResponse(data) {
-
-	console.log("Received response from server...");
-
-	// request the persistent file system
+	// example to write a file...
+	console.log("Requesting file system...");
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs) {
-	
-		// got the file system..
-		console.log("Got the file system...");
 
-		// if...
-		var filename = "foo.html";
-		checkForExistence(fs, filename, data, function() {
-			console.log("Write handler...");
-		});
-	
-	}, handleError);
-}
+		// got a file system - now get a file entry...
+		console.log("Requesting file...");
+		fs.root.getFile(filename, { create: true }, function(entry) {
 
-function checkForExistence(fs, filename, data, writeHandler) {
+			// got a file entry, now get a writer...
+			console.log("Requesting writer...");
+			entry.createWriter(function(writer) {
 
-	console.log("Checking for existence of file: " + filename);
-	filename = filename.toLowerCase();
-
-	// args...
-	var args = {
-		create: true
-	};
-
-	// create a directory reader...
-	var reader = fs.root.createReader();
-	var files = [];
-	var exists = false;
-	var doRead = function() {
-		reader.readEntries(function(entries) {
-			
-			// walk...
-			var changed = false;
-			for(var index in entries) {
-
-				// the file...
-				var found = entries[index].name.toLowerCase();
-
-				// have we seen it?
-				if(!(contains(files, found))) {
-					files.push(found);
-					changed = true;
-				}
+				// got a writer, so write it...
+				console.log("Writing the file...");
+				writer.write("Hello, world - ." + new Date());
 				
-				// found?
-				if(found == filename)  {
-					exists = true;
-					break;
-				}
+				// log...
+				navigator.notification.alert("Done.");
 				
-			}
-			
-			// if...
-			if(changed && !(exists))
-				doRead();
-			else {
-					
-				// load the entry...
-				var args = {
-					create: true
-				}
-				console.log("Getting file entry for: " + filename);
-				fs.root.getFile(filename, args, function(entry) {
-					
-					if(exists) {
-					 	entry.remove(function() {
-						
-							// load the file again (it'll be broken as we deleted it...)
-							fs.root.getFile(filename, args, function(entry) {
-					 			writeFile(fs, entry, data);
-							}, handleError);
-							
-					 	}, handleError);
-					} else 
-					 	writeFile(fs, entry, data);
-					
-				}, handleError);
+			}, handleError);
 
-				return;
-			}
-			
-		});
-	};
-	
-	// kick off the initial read...
-	doRead();
-	
-}
-
-function contains(files, file) {
-	for(var index in files) {
-		if(files[index] == file)
-			return true;
-	}
-	return false;
-}
-
-function writeFile(fs, entry, data) {
-
-	console.log("Creating a writer...");
-
-	// write the file...
-	entry.createWriter(function(writer) {
-	
-		console.log("Writer done.");
-	
-		writer.write(data);
-		console.log("File dumped.");
+		}, handleError);
 
 	}, handleError);
+
+}
+
+function handleFileRead() {	
+	
+	var filename = getFilename();
+	if(filename == null)
+		return;
+	
+	// example to write a file...
+	console.log("Requesting file system...");
+	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs) {
+
+		// got a file system - now get a file entry...
+		console.log("Requesting file...");
+		fs.root.getFile(filename, { create: true }, function(entry) {
+
+			// got a file entry, now get a reader...
+	        var reader = new FileReader();
+	        reader.onloadend = function(e) {
+	            console.log("Reading file...");
+	            $("#contents").html(e.target.result);
+	        };
+	
+			// go...
+	        reader.readAsText(entry);
+
+		}, handleError);
+
+	}, handleError);
+
+}
+
+function getFilename() {
+
+	var filename = $("#filename").val().trim();
+	if(filename != null && filename.length > 0)
+		return filename;
+	else
+		return null;
+
 }
 
 function handleError(err) {
-	console.log("ERROR:");
-	console.log(JSON.stringify(err));
+	console.log("ERROR");
+	console.log(err);
 }
