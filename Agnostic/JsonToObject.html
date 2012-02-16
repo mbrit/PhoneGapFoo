@@ -1,0 +1,23 @@
+<html>
+<head><title>JSON to object</title></head>
+<script type="text/javascript">
+<!--
+
+// take some JSON...
+var json = '{"pizza":"Deep Pan","toppings":["Mushroom","Ham","Pineapple"]}';
+
+// turn it into an object...
+var myObject = JSON.parse(json);
+
+// style of pizza...
+console.log("The pizza: " + myObject.pizza);
+
+// the toppings...
+console.log(myObject.toppings.length + " topping(s)...");
+for(var index in myObject.toppings)
+	console.log("    " + myObject.toppings[index]);
+
+-->
+</script>
+<body></body>
+</html>

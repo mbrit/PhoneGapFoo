@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+    <script type="text/javascript">
+
+
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+		// console.log("Do we have indexedDB?");
+		// // if(window.webkitIndexedDB == null)
+		// // 	console.log("No webkit.");
+		// console.log("Well. Good.");
+        
+        //onDeviceReady();
+	}
+	
+	function onDeviceReady()
+	{
+		console.log("Device ready!");
+		console.log("Do we have indexedDB?");
+
+        if(window.webkitIndexedDB == null)
+            console.log("No indexed DB (webkit).");
+        else
+            console.log("Indexed DB (webkit)...");
+
+        if(window.indexedDB == null)
+            console.log("No indexed DB (basic).");
+        else
+            console.log("Indexed DB (basic)...");
+
+        if(window.openDatabase == null)
+            console.log("No open database.");
+        else
+            console.log("Yes, open database...");
+            
+		// get the location...
+		// hide...
+	console.log("Getting location...");
+	
+	// run...
+	var args = {
+		enableHighAccuracy: true
+	};
+	navigator.geolocation.getCurrentPosition(function(location) {
+		
+		// set...
+		console.log("New location loaded: " + JSON.stringify(location));
+		currentLocation = location.coords;		
+	
+	}, function(err) {
+		console.log(JSON.stringify(err));
+	}, args)
+		
+	}
+
+	function(foo) {
+		bar;
+	}
+
+    
+    </script>
+  </head>
+
+  <body onload="onBodyLoad()">
+	<h1>What's this like?</h1>
+	<p>OK</p>
+  </body>
+
+</html>

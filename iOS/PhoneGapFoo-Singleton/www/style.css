@@ -1,0 +1,35 @@
+body
+{
+	background-color:yellow;
+	font-family:helvetica;
+}
+
+h1
+{
+	font-size:18pt;
+	font-weight:bold;
+	color:red;
+}
+
+.pane
+{
+	display:none;
+}
+
+fieldset
+{
+	margin:0;
+	padding:0;
+	border:none;
+}
+
+fieldset li
+{
+	list-style:none;
+}
+
+fieldset label
+{
+	float:left;
+	width:100px;
+}	font-weight:bold;

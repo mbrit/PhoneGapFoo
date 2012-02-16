@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+    
+    <link rel="stylesheet" href="grossstyle.css" type="text/css" />
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+    
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="knockout-2.0.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="main.js"></script>
+	<script type="text/javascript" charset="utf-8" src="singleton.js"></script>
+                
+    <script type="text/javascript">
+
+	function onBodyLoad()
+	{		
+        console.log("Body loaded...");
+    
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	function onDeviceReady() {
+		initialize();
+	}
+    
+    </script>
+  </head>
+  
+  <body onload="onBodyLoad()">
+
+    <div id="contacts" class="pane">
+
+        <h1>Contacts</h1>
+        <ul data-bind="foreach:contacts" id="contactslist">
+            <li><a data-bind="text:name.formatted,attr:{'data-foo':id}"></a></li>
+        </ul>
+
+    </div>
+
+    <div id="contact" class="pane">
+
+        <h1>Contact</h1>
+        <fieldset id="contactsingleton">
+            <ul>
+                <li><label>First name</label><div data-bind="text:name.givenName"></div></li>
+                <li><label>Last name</label><div data-bind="text:name.familyName"></div></li>
+            </ul>     
+        </fieldset>
+        
+        <a href="#" class="navcontacts">Back to contacts</a>
+
+    </div>
+
+  </body>
+  
+</html>
