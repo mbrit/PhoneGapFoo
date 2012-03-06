@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="knockout-2.0.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="common.js"></script>
+	<script type="text/javascript" charset="utf-8" src="main.js"></script>
+	<script type="text/javascript" charset="utf-8" src="detail.js"></script>
+	
+    <link rel="stylesheet" href="jquery.mobile-1.0.1.min.css" type="text/css" />
+
+    <script type="text/javascript">
+
+
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	function onDeviceReady()
+	{
+		initialize();
+	}
+    
+    </script>
+  </head>
+  <body onload="onBodyLoad()">
+
+	<div id="main" data-role="page"> 
+		
+		<div data-role="header">Contacts</div> 
+		<div data-role="content">
+
+	    	<ul data-bind="foreach:contacts" data-role="listview" id="thelist">
+		        <li><a href="#" data-bind="text:name.formatted,attr:{'data-id':name.formatted}" class="detaillink"></a></li>
+		    </ul>
+	
+		</div>
+	
+	</div>
+	
+	<div id="detail" data-role="page"> 
+		<div data-role="header">Detail</div> 
+		<div data-role="content">
+							
+			<a href="#" data-role="button" data-rel="back">Back</a>
+
+			<fieldset>
+
+				<div data-role="fieldcontain">
+					<label for="title">Full name</label>
+					<div id="title" data-bind="text:name.formatted"></div>
+				</div>
+
+			</fieldset>
+							
+		</div> 
+	</div>
+
+  </body>
+</html>

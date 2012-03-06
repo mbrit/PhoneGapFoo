@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0.1.min.js"></script>
+	
+	<link rel="stylesheet" href="jquery.mobile-1.0.1.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	function onDeviceReady()
+	{
+		// do your thing!
+		navigator.notification.alert("PhoneGap is working");
+	}
+    
+    </script>
+  </head>
+
+  <body onload="onBodyLoad()">
+
+	<div id="main" data-role="page"> 
+		
+		<div data-role="header">jQuery Mobile and PhoneGap</div> 
+		<div data-role="content">			
+		
+			<a href="#mydialog" data-role="button" data-rel="dialog">Show me a Dialog!</a>
+
+		</div>
+	
+	</div>
+
+	<div id="mydialog" data-role="dialog">
+
+		<div data-role="header">
+			<h1>My dialog</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Great! We're in a dialog!</p>
+			<a href="#" data-role="button" data-rel="back">Close</a>    
+		</div>
+	</div>
+
+  </body>
+
+</html>

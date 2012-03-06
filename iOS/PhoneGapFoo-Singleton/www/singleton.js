@@ -35,8 +35,6 @@ function showView(name) {
 function refreshContacts() { 
 
     console.log("Refreshing contacts...");
-    try
-    {
 
     // call the contacts...
     var args = new ContactFindOptions();
@@ -60,15 +58,7 @@ function refreshContacts() {
     }, function(err) {
         handleError(err);
     }, args);
-    
-    }
-    catch(ex)
-    {
-        console.log(ex);
-    }
-    
-    console.log("Outside of handler...");
-    
+   
 }
 
 function handleError(err) {

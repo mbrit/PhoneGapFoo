@@ -19,9 +19,7 @@
 	<key>OpenAllWhitelistURLsInWebView</key>
 	<false/>
 	<key>ExternalHosts</key>
-	<array>
-		<string>streetfoo.apphb.com</string>
-	</array>
+	<array/>
 	<key>Plugins</key>
 	<dict>
 		<key>com.phonegap.accelerometer</key>
