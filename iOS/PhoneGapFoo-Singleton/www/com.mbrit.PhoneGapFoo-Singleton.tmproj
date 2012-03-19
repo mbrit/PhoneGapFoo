@@ -3,34 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>index.html</string>
+	<string>main.js</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
+			<string>common.js</string>
+			<key>lastUsed</key>
+			<date>2012-03-18T21:05:18Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
 			<string>index.html</string>
 			<key>lastUsed</key>
-			<date>2012-03-06T15:00:34Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2012-03-18T21:39:11Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>jquery-1.7.1.min.js</string>
 			<key>lastUsed</key>
-			<date>2012-03-06T14:08:38Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>jquery.mobile-1.0.1.min.css</string>
-			<key>lastUsed</key>
-			<date>2012-03-06T13:33:59Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>jquery.mobile-1.0.1.min.js</string>
-			<key>lastUsed</key>
-			<date>2012-03-06T13:46:27Z</date>
+			<date>2012-03-18T21:08:05Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -38,25 +30,29 @@
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>common.js</string>
-			<key>lastUsed</key>
-			<date>2012-03-06T14:06:40Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>detail.js</string>
-			<key>lastUsed</key>
-			<date>2012-03-06T15:00:34Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
 			<string>main.js</string>
 			<key>lastUsed</key>
-			<date>2012-03-06T14:10:04Z</date>
+			<date>2012-03-18T21:39:11Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>phonegap-1.4.1.js</string>
+			<key>lastUsed</key>
+			<date>2012-03-18T21:08:13Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>singleton.js</string>
+			<key>lastUsed</key>
+			<date>2012-03-18T21:35:11Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>style.css</string>
+			<key>lastUsed</key>
+			<date>2012-03-18T21:21:37Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -68,72 +64,62 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>0</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-		</dict>
-		<key>detail.js</key>
-		<dict>
-			<key>caret</key>
+			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>10</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>19</integer>
+				<integer>2</integer>
 			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
 		</dict>
 		<key>index.html</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>90</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>10</integer>
+				<integer>44</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>23</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>56</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>44</integer>
+			</dict>
 		</dict>
 		<key>jquery-1.7.1.min.js</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>jquery.mobile-1.0.1.min.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>32</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>jquery.mobile-1.0.1.min.js</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -152,9 +138,67 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>23</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>9</integer>
+				<integer>0</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>1</integer>
+				<key>line</key>
+				<integer>10</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<key>phonegap-1.4.1.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>singleton.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>25</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>style.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -164,17 +208,17 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>index.html</string>
 		<string>main.js</string>
+		<string>phonegap-1.4.1.js</string>
 		<string>jquery-1.7.1.min.js</string>
-		<string>detail.js</string>
+		<string>singleton.js</string>
 		<string>common.js</string>
-		<string>jquery.mobile-1.0.1.min.js</string>
-		<string>jquery.mobile-1.0.1.min.css</string>
+		<string>index.html</string>
+		<string>style.css</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{602, 282}, {1104, 746}}</string>
+	<string>{{258, 57}, {1104, 734}}</string>
 </dict>
 </plist>

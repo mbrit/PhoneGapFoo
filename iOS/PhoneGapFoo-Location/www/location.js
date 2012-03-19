@@ -38,7 +38,7 @@ function refreshLocation() {
 		
 	}, function(err) {
 		console.log(JSON.stringify(err));
-		revertButton();
+		revertButton();	
 	}, args)
 	
 }
