@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="knockout-2.0.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="webdatabase.js"></script>
+    <script type="text/javascript">
+
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	function onDeviceReady()
+	{
+		initialize();
+	}
+    
+    </script>
+  </head>
+
+  <body onload="onBodyLoad()">
+
+	<h1>Web Database</h1>
+	<input type="button" id="createtablebutton" value="Create Table" />
+	<input type="button" id="addrowbutton" value="Add Row" />
+	<input type="button" id="selectallbutton" value="Get All" />
+	<input type="button" id="selectonebutton" value="Get by ID" />
+	<input type="button" id="droptablebutton" value="Drop Table" />
+
+	<table id="results">
+		<tr>
+			<td>FirstName</td>
+			<td>LastName</td>
+			<td>Email</td>
+		</tr>
+		<tbody data-bind="foreach:customers">
+			<tr>
+				<td data-bind="text:firstName"></td>
+				<td data-bind="text:lastName"></td>
+				<td data-bind="text:email"></td>
+			</tr>
+		</tbody>
+	</table>
+
+  </body>
+
+</html>

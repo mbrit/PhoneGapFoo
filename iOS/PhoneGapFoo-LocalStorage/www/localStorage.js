@@ -1,21 +1,8 @@
 function initialize() {
 	
-	$("#refreshbutton").click(function() {
-		refreshView();
-	});
-	$("#setbutton").click(function() {
-		handleSet();
-	});
-	$("#clearbutton").click(function() {
-		handleClear();
-	});
-	
-	var bar = {
-		martha: "ellie"
-	};
-	var json = JSON.stringify(bar);
-	var foo  = JSON.parse(json);
-	console.log(foo.martha);
+	$("#refreshbutton").click(refreshView);
+	$("#setbutton").click(handleSet);
+	$("#clearbutton").click(handleClear);
 	
 	// refresh the view...
 	refreshView();

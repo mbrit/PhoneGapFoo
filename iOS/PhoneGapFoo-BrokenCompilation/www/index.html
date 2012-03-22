@@ -46,11 +46,11 @@
 	{
 		// args...
 		var foo = {
-			theId: "buttonThree";
+			theId: "buttonThree"
 		};
 		
 		// run some adhoc javascript...
-		$("input").hide();
+		//$("input").hide();
 		$("#" + foo.theId).show();
 		
 	}
@@ -59,6 +59,21 @@
   </head>
   <body onload="onBodyLoad()">
 	<h1>Breaking compilation</h1>
+	<input type="button" id="buttonOne" value="Button One" />
+	<input type="button" id="buttonTwo" value="Button Two" />
+	<input type="button" id="buttonThree" value="Button Three" />
+	<input type="button" id="buttonFour" value="Button Four" /><input type="button" id="buttonOne" value="Button One" />
+	<input type="button" id="buttonTwo" value="Button Two" />
+	<input type="button" id="buttonThree" value="Button Three" />
+	<input type="button" id="buttonFour" value="Button Four" />
+	<input type="button" id="buttonOne" value="Button One" />
+	<input type="button" id="buttonTwo" value="Button Two" />
+	<input type="button" id="buttonThree" value="Button Three" />
+	<input type="button" id="buttonFour" value="Button Four" />
+	<input type="button" id="buttonOne" value="Button One" />
+	<input type="button" id="buttonTwo" value="Button Two" />
+	<input type="button" id="buttonThree" value="Button Three" />
+	<input type="button" id="buttonFour" value="Button Four" />
 	<input type="button" id="buttonOne" value="Button One" />
 	<input type="button" id="buttonTwo" value="Button Two" />
 	<input type="button" id="buttonThree" value="Button Three" />

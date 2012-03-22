@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>main.js</string>
+	<string>singleton.js</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -32,9 +32,7 @@
 			<key>filename</key>
 			<string>main.js</string>
 			<key>lastUsed</key>
-			<date>2012-03-18T21:39:11Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2012-03-21T14:05:02Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -46,7 +44,9 @@
 			<key>filename</key>
 			<string>singleton.js</string>
 			<key>lastUsed</key>
-			<date>2012-03-18T21:35:11Z</date>
+			<date>2012-03-21T14:05:02Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -138,30 +138,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>25</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>16</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>10</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
 		</dict>
 		<key>phonegap-1.4.1.js</key>
 		<dict>
@@ -182,9 +166,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>40</integer>
 				<key>line</key>
-				<integer>25</integer>
+				<integer>5</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -219,6 +203,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{258, 57}, {1104, 734}}</string>
+	<string>{{203, 57}, {1024, 734}}</string>
 </dict>
 </plist>
